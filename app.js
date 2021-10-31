@@ -26,9 +26,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(5, 9) { //eslint-disable-line
+function sum(a, b) { 
+    let total = a * b;
+    let result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
+    console.log(result);  
+    return result } 
+    testSum(5, 9)
 
-}
 // comment
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
