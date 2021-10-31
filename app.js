@@ -26,12 +26,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { 
+function multiply(a, b) { 
     let total = a * b;
     let result = [total, 'The sum of ' + a + ' and ' + b + ' is ' + total + '.'];
     console.log(result);  
     return result } 
-    testSum(5, 9)
+    testMultiply(5, 9)
 
 // comment
 // Here is the test for multiply(); uncomment it to run it
@@ -52,8 +52,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
-}
+    let sumOf = sum(a,b);
+    let sumTotal = sum(sumOf[0], c);
+    let productOf = testMultiply(a,b);
+    let productTotal = testMultiply(productOf[0], c);
+    let sumMultiplyArray = [sumTotal[0], productTotal[0], a + ' and ' + b + ' and ' + c + ' sum to ' + sumTotal[0] + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productTotal[0] + '.'];
+    // console.log(sumMultiplyArray);
+     return sumMultiplyArray;
+  }
+  // Here is the test for sumAndMultiply(); uncomment it to run it
+   testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
